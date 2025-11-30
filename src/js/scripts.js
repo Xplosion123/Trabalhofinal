@@ -85,6 +85,26 @@ document.addEventListener("DOMContentLoaded", function () {
         // Cursos / Planos
         const h3s = document.querySelectorAll('.curso-card h3'); if(h3s.length >=3){ h3s[0].innerText = en ? 'Basic Plan Beginner' : 'Plano Básico Iniciante'; h3s[1].innerText = en ? 'Advanced Plan Masterclass' : 'Plano Avançado Masterclass'; h3s[2].innerText = en ? 'Intermediate Plan Progress' : 'Plano Intermediário Progresso'; }
         const precos = document.querySelectorAll('.curso-card .preco'); if(precos.length){ precos[0].innerText = en ? '$99/month' : 'R$ 99/mês'; precos[1].innerText = en ? '$299/month' : 'R$ 299/mês'; precos[2].innerText = en ? '$179/month' : 'R$ 179/mês'; }
+        
+        // Descrições dos cursos
+        const curso1Desc = document.querySelectorAll('#curso1-lista li');
+        if(curso1Desc.length >= 4){
+            const descEn = ['Access to basic courses','Videos and interactive exercises','Weekly group classes','Access via Android and iOS'];
+            const descPt = ['Acesso aos cursos básicos','Vídeos e exercícios interativos','Aulas em grupo semanais','Acesso via Android e iOS'];
+            curso1Desc.forEach((li, i) => li.innerText = en ? descEn[i] : descPt[i]);
+        }
+        
+        const curso2Desc = document.getElementById('curso2-desc'); 
+        if(curso2Desc) curso2Desc.innerText = en ? 'Complete course with more content and focus on all aspects of the language.' : 'Curso completo, com mais conteúdos e foco em todos os aspectos do idioma.';
+        
+        const curso3Desc = document.getElementById('curso3-desc'); 
+        if(curso3Desc) curso3Desc.innerText = en ? 'Advanced course with personalized classes and exclusive materials.' : 'Curso avançado, com aulas personalizadas e materiais exclusivos.';
+        
+        // Botões Adquirir
+        const btns = document.querySelectorAll('.btn-adquirir'); 
+        if(btns.length >= 3){ 
+            btns.forEach(btn => btn.innerText = en ? 'Get Course' : 'Adquirir Curso'); 
+        }
 
         // Método
         safeTextSelector('#metodo h2', en ? 'Our Method' : 'Nosso Método');
