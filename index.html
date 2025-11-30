@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Fácil Idiomas</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+</head>
+
+<body id="top">
+
+    <nav class="navbar">
+        <a href="#top" class="logo" id="logo-text">
+            <img src="assets/icons/logo.ico" class="logo-img">
+            Aprende Fácil Idiomas
+        </a>
+        <div class="hamburger" id="hamburger">☰</div>
+        <div class="nav-links" id="menu">
+            <a id="nav-sobre" href="#sobre">Sobre</a>
+            <a id="nav-adquirir" href="#cursos">Adquirir</a>
+            <a id="nav-metodo" href="#metodo">Método</a>
+            <a id="nav-beneficios" href="#beneficios">Benefícios</a>
+            <a href="#" class="lang-switch" onclick="trocarIdioma()">
+                <img src="assets/icons/brasil.webp" class="flag" id="flag-br">
+                <img src="assets/icons/inglaterra.png" class="flag" id="flag-uk">
+            </a>        
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1 id="hero-title">Aprenda Idiomas com Facilidade</h1>
+        <p id="hero-text">O jeito mais moderno e rápido de aprender idiomas.</p>
+        <button type="button" class="hero-btn" id="start-btn">Começar Agora</button>
+    </section>
+
+    <section class="section" id="sobre">
+        <h2>Sobre a Aprende Fácil Idiomas</h2>
+        <p>
+            Somos uma escola focada em transformar o aprendizado de idiomas em algo fácil e eficiente.
+            Nosso objetivo é levar você à fluência de forma natural, clara e sem complicações.
+        </p>
+    </section>
+
+    <section class="section" id="cursos">
+        <h2>Escolha seu Curso</h2>
+        <div class="curso">
+            <!-- Plano Básico (Mais barato) -->
+            <div class="curso-card plano-barato">
+                <h3>Plano Básico  Iniciante</h3>
+                <ul>
+                    <li>Acesso aos cursos básicos</li>
+                    <li>Vídeos e exercícios interativos</li>
+                    <li>Aulas em grupo semanais</li>
+                    <li>Acesso via Android e iOS</li>
+                </ul>
+                <p class="preco">R$ 99/mês</p>
+                <button class="btn-adquirir">Adquirir Curso</button>
+            </div>
+
+            <!-- Plano Avançado (Melhor curso, no meio) -->
+            <div class="curso-card plano-melhor">
+                <h3>Plano Avançado Masterclass</h3>
+                <ul>
+                    <li>Curso completo, com mais conteúdos e foco em todos os aspectos do idioma.</li>
+                </ul>
+                <p class="preco">R$ 299/mês</p>
+                <button class="btn-adquirir">Adquirir Curso</button>
+            </div>
+
+            <!-- Plano Intermediário (À direita) -->
+            <div class="curso-card plano-intermediario">
+                <h3>Plano Intermediário Progresso</h3>
+                <ul>
+                    <li>Curso avançado, com aulas personalizadas e materiais exclusivos.</li>
+                </ul>
+                <p class="preco">R$ 179/mês</p>
+                <button class="btn-adquirir">Adquirir Curso</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="metodo">
+        <h2>Nosso Método</h2>
+        <p>
+            Nosso método combina tecnologia, prática diária e situações reais para acelerar sua fluência.
+            Você aprende conversando, ouvindo, aplicando e vivendo o idioma — não apenas decorando regras.
+        </p>
+        <p style="margin-top:20px; font-style:italic;">
+            Aprenda inglês de verdade com um método que realmente funciona.
+        </p>
+    </section>
+
+    <div class="carousel-container">
+        <button class="carousel-btn" id="prev">&#10094;</button>
+        <div class="carousel" id="carousel">
+            <img src="assets/images/1.png" alt="">
+            <img src="assets/images/2.png" alt="">
+            <img src="assets/images/3.png" alt="">
+        </div>
+        <button class="carousel-btn" id="next">&#10095;</button>
+    </div>
+
+    <section class="section" id="beneficios">
+        <h2>Por que escolher a nossa escola?</h2>
+        <p>Aulas personalizadas para cada aluno </p>
+        <p>Plataforma fácil, atualizada e focada na conversação </p>
+        <p>Conteúdo moderno e acessível </p>
+        <p>Aprendizado rápido e natural </p>
+        <p>Professores especializados </p>
+        <p>Suporte direto pelo WhatsApp </p>
+    </section>
+
+<section class="section" id="missao-visao-valores">
+    <h2>Missão, Visão e Valores</h2>
+    <div class="cards-container">
+        <!-- Visão -->
+        <div class="card" id="visao">
+            <h3 id="visao-titulo">Visão</h3>
+            <p id="visao-desc">Nosso compromisso é entregar um ensino de qualidade, moderno e acessível para todos.</p>
+        </div>
+
+        <!-- Missão -->
+        <div class="card" id="missao">
+            <h3 id="missao-titulo">Missão</h3>
+            <p id="missao-desc">Nosso compromisso é transformar o aprendizado de idiomas em uma experiência prática e eficiente.</p>
+        </div>
+
+        <!-- Valores -->
+        <div class="card" id="valores">
+            <h3 id="valores-titulo">Valores</h3>
+            <p id="valores-desc">Inovação, dedicação e qualidade no ensino, focados no sucesso do aluno.</p>
+        </div>
+    </div>
+</section>
+
+    <section class="contact" id="contato">
+        <h2 id="contact-title">Entre em Contato</h2>
+        <p id="contact-sub">Quer saber mais ou agendar uma sessão? Fale conosco.</p>
+
+        <form id="formContato" onsubmit="enviarEmail(event)">
+            <input type="text" id="nome" placeholder="Seu Nome" required>
+            <input type="text" id="telefone" placeholder="Seu Número" required>
+            <input type="email" id="email" placeholder="Seu Email" required>
+            <textarea id="mensagem" rows="5" placeholder="Escreva sua mensagem aqui" required></textarea>
+
+            <button id="btn-enviar" type="submit">Enviar Mensagem</button>
+        </form>
+
+        <p id="label-tel" style="margin-top:20px;">Telefone: (11) 95122-2827</p>
+        <p id="label-email">E-mail: henrimelo06@gmail.com</p>
+        <p id="label-social">Redes Sociais:</p>
+    </section>
+
+    <footer>
+        <div id="footer-menu">Sobre | Serviços | Portfólio | Blog | Contato</div>
+        <br>
+        <div id="footer-copy">Aprende Fácil Idiomas © 2025 | Política de Privacidade | Termos de Uso</div>
+    </footer>
+
+    <div id="toTop" onclick="scrollToTop()">↑</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="src/js/scripts.js"></script>
+
+</body>
+</html>

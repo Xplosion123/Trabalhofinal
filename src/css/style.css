@@ -1,0 +1,643 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+:target{
+    scroll-margin-top: 100px;
+}
+
+body{
+    background: linear-gradient(135deg, #0B0736 0%, #750532 100%);
+    color:white;
+    overflow-x:hidden;
+}
+
+#beneficios p:hover{
+    transform:scale(1.5);
+    text-decoration:underline;
+    cursor:pointer;
+}
+#visao{
+    margin-left:35%;
+    width:32%;
+    border-radius:50%;
+    background:linear-gradient(to bottom left, rgb(231, 21, 21), rgb(243, 132, 132),rgb(231, 21, 21));
+}
+
+#visao h3{
+    color:rgb(32, 17, 202);
+}
+
+#missao{
+    margin-left:35%;
+    width:32%;
+    border-radius:50%;
+    background:linear-gradient(to bottom left, #36f01d, #7de470,#36f01d);
+}
+
+#missao h3{
+    
+    color:rgb(32, 17, 202);
+}
+#valores{
+    margin-left:35%;
+    width:32%;
+    border-radius:50%;
+    background:linear-gradient(to bottom left, rgb(243, 228, 25), rgb(231, 223, 151),rgb(243, 228, 25));
+}
+
+#valores h3{
+    
+    color:rgb(32, 17, 202);
+}
+
+
+
+/* NAVBAR */
+.navbar{
+    width:100%;
+    padding:20px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(255,255,255,0.05);
+    backdrop-filter: blur(8px);
+    z-index:9999;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    cursor:pointer;
+    color:white;
+    text-decoration:none;
+}
+
+/* HAMBURGUER */
+.hamburger{
+    font-size:32px;
+    cursor:pointer;
+    display:block;
+}
+
+/* MENU LATERAL */
+.nav-links{
+    position:absolute;
+    top:80px;
+    right:-280px;
+    width:250px;
+    background:rgba(0,0,0,0.5);
+    backdrop-filter:blur(10px);
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    padding:30px;
+    border-radius:10px;
+    transition:0.4s;
+}
+
+.nav-links.open{
+    right:20px;
+}
+
+.nav-links a{
+    color:white;
+    font-size:20px;
+    text-decoration:none;
+}
+
+/* HERO */
+.hero{
+    min-height:70vh;              
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:100px 20px 40px;      
+}
+
+.hero h1{
+    font-size:55px;
+    font-weight:800;
+}
+
+.hero p{
+    font-size:20px;
+    opacity:0.9;
+    margin-top:10px;
+}
+
+.hero-btn {
+    margin-top: 25px;
+    padding: 14px 35px;
+    background: white;
+    color: #0B0736;
+    border-radius: 12px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+    transform: scale(1.1);
+    background-color: #B83A63;
+    color: white;
+}
+
+.hero-btn:active {
+    transform: translateY(4px);
+    background-color: #9b3257; /* Cor mais escura ao clicar */
+}
+
+/* ============================= */
+/* CARROSSEL           */
+/* ============================= */
+
+.carousel-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    position: relative;
+    overflow: hidden; /* Mantido aqui */
+}
+
+.carousel {
+    display: flex;                  
+    width: 300%;                   /* Mantido em 300% para 3 slides */
+    height: 300px;                 
+    border-radius: 12px;
+    transition: transform 0.6s ease-in-out;
+    background: rgba(0,0,0,0.08);    
+}
+
+.carousel img {
+    /* Ajustes para garantir que cada imagem ocupe EXATAMENTE 1/3 do contêiner flexível */
+    width: calc(100% / 3);
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    /* Adicionando uma garantia de que não há margem interna/externa inesperada */
+    margin: 0;
+    padding: 0;
+}
+
+/* BOTÕES DO CARROSSEL */
+.carousel-btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.45);
+    border:none;
+    color:white;
+    font-size:30px;
+    padding:8px 14px;
+    cursor:pointer;
+    border-radius:8px;
+    z-index:5;
+}
+
+#prev{left:8px;}
+#next{right:8px;}
+
+/* SEÇÕES */
+.section{
+    width:90%;
+    margin:60px auto;
+    text-align:center;
+}
+
+.section h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.section p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.6;
+    opacity:0.9;
+}
+
+/* CONTATO */
+.contact{
+    width:90%;
+    margin:60px auto;
+    background:rgba(255,255,255,0.08);
+    padding:40px;
+    border-radius:15px;
+}
+
+.contact input, 
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+}
+
+.contact button{
+    background:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:10px;
+    color:#0B0736;
+    font-size:18px;
+    cursor:pointer;
+}
+
+/* BOTÃO VOLTAR AO TOPO */
+#toTop{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    width:55px;
+    height:55px;
+    background:#B83A63;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    cursor:pointer;
+    display:none;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px;
+    background:rgba(0,0,0,0.4);
+    margin-top:50px;
+}
+
+/* RESPONSIVO */
+@media (max-width:600px){
+    .carousel { height: 220px; }
+    .hero h1{ font-size:36px; }
+    .hero p{ font-size:16px; }
+}
+.flag {
+    width: 28px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+}
+
+.lang-switch {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+/* Estilo da nova seção de cursos */
+#cursos {
+    background: none; /* Remove o fundo gradiente, mantendo o fundo normal do site */
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#cursos h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.curso {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.curso-card {
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    border-radius: 12px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.curso-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.curso-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.curso-card:hover {
+    transform: scale(1.05); /* Efeito de hover para aumentar o card */
+}
+
+.btn-adquirir {
+    padding: 12px 25px;
+    background-color: #B83A63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Adicionando transição */
+}
+
+.btn-adquirir:hover {
+    background-color: #9b3257; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.1); /* Efeito de aumentar o botão ao passar o mouse */
+}
+
+@media (max-width: 600px) {
+    .curso {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curso-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Estilo da seção de cursos */
+#cursos {
+    background: none; 
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+#cursos h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.curso {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.curso-card {
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    border-radius: 12px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.curso-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.curso-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.curso-card ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.curso-card .preco {
+    font-size: 28px;
+    font-weight: bold;
+    color: #B83A63;
+    margin: 20px 0;
+}
+
+.curso-card:hover {
+    transform: scale(1.05); 
+}
+
+/* Diferenciação dos planos */
+.plano-melhor {
+    transform: scale(1.1); /* Aumenta o destaque do melhor plano */
+    border: 2px solid #B83A63;
+}
+
+.plano-barato {
+    background: rgba(0, 0, 0, 0.7); /* Menor destaque */
+}
+
+.plano-intermediario {
+    background: rgba(0, 0, 0, 0.6); /* Intermediário */
+}
+
+/* Botão de adquirir */
+.btn-adquirir {
+    padding: 12px 25px;
+    background-color: #B83A63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-adquirir:hover {
+    background-color: #9b3257;
+    transform: scale(1.1);
+}
+
+@media (max-width: 600px) {
+    .curso {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .curso-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+#missao-visao-valores {
+    padding: 60px 20px;
+    text-align: center;
+    background: none; /* Remove fundo branco */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Espaçamento entre o título e os cards */
+}
+
+#missao-visao-valores h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #0B0736;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%; /* Garante que os cards ocupem toda a largura disponível */
+    max-width: 900px; /* Limita a largura para não expandir demais */
+    margin: 0 auto; /* Centraliza os cards */
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 24px;
+    color: #0B0736;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Visão */
+#visao{
+    margin-left:35%;
+    width:32%;
+    border-radius:50%;
+    background:linear-gradient(to bottom left, rgb(231, 21, 21), rgb(243, 132, 132),rgb(231, 21, 21));
+}
+
+#missao{
+    margin-left:35%;
+    width:32%;
+    border-radius:50%;
+    background:linear-gradient(to bottom left, #36f01d, #7de470,#36f01d);
+}
+
+#valores{
+    margin-left:35%;
+    width:32%;
+    border-radius:50%;
+    background:linear-gradient(to bottom left, rgb(243, 228, 25), rgb(231, 223, 151),rgb(243, 228, 25));
+}
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+/* Alterações para os três cards: Missão, Visão, Valores */
+#visao, #missao, #valores {
+    width: 220px; /* Tamanho fixo das bolinhas */
+    height: 220px; /* Tamanho proporcional */
+    margin: 20px; /* Espaçamento entre os cards */
+    border-radius: 50%; /* Deixa o elemento redondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Gradientes para as seções */
+#visao {
+    background: linear-gradient(to bottom left, rgb(231, 21, 21), rgb(243, 132, 132));
+}
+
+#missao {
+    background: linear-gradient(to bottom left, #36f01d, #7de470);
+}
+
+#valores {
+    background: linear-gradient(to bottom left, rgb(243, 228, 25), rgb(231, 223, 151));
+}
+sao-valores {
+    padding: 60px 20px;
+    text-align: center;
+    background: none; /* Remove fundo branco */
+    color: white;
+    display: flex;
+    justify-content: center; /* Alinha os items no centro */
+    gap: 30px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite quebra de linha para responsividade */
+}
+/* Ajuste de fonte para os títulos e parágrafos dentro das bolinhas */
+#visao h3, #missao h3, #valores h3 {
+    font-size: 20px; /* Tamanho da fonte ajustado */
+    color: white;
+    margin-bottom: 10px;
+}
+
+#visao p, #missao p, #valores p {
+    font-size: 14px; /* Fonte menor */
+    color: white;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+.card:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do card ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais forte */
+}
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    #missao-visao-valores {
+        flex-direction: column; /* Organiza as bolinhas em uma coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .card {
+        width: 200px; /* Ajuste o tamanho dos cards para telas pequenas */
+        margin-bottom: 20px;
+    }
+}
